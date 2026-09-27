@@ -3,20 +3,22 @@ project:
   output-dir: docs
 
 website:
-  title: "DS002Website"
+  title: "Data Science: Andy Xiao"
   navbar:
     left:
       - href: index.qmd
         text: Home
       - about.qmd
+      - Dataset1.qmd
+
 
 format:
   html:
     theme:
-      - cosmo
-      - brand
+      dark: Cyborg
     css: styles.css
     toc: true
+    page-layout: full
 
 
 

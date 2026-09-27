@@ -1,0 +1,37 @@
+---
+title: "Income Inequality Before and After Taxes"
+about: marquee
+execute:
+  echo: false
+  results: hide
+  warning: false
+
+---
+
+
+```{r}
+library(tidyverse)
+income_inequality_processed <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-08-05/income_inequality_processed.csv')
+world_difference = income_inequality_processed |>
+    mutate(difference = gini_mi_eq - gini_dhi_eq) |>
+    filter(!is.na(difference)) |>
+    slice_max(difference, n = 10)
+world_difference
+
+
+
+USA_income = income_inequality_processed |>
+    filter(Entity == "United States")
+
+ggplot(world_difference, aes(x = Year, y = difference, color = Entity))+ 
+    geom_line()
+ggplot(USA_income, aes(x = Year)) +
+    geom_line(aes(y = gini_dhi_eq, color = "After Tax")) + 
+    geom_line(aes(y = gini_mi_eq, color = "Before Tax")) +
+    labs(
+        color = "Income Measure",
+        y = "income Inequality",
+        title = "United States Income Inequality"
+
+    )
+```

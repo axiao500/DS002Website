@@ -1,5 +1,6 @@
 ---
 title: "DS002Website"
+about: solana
 ---
 
 This is a Quarto website.

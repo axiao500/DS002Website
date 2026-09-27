@@ -1,0 +1,23 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "DS002Website",
+    "section": "",
+    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "Dataset1.html",
+    "href": "Dataset1.html",
+    "title": "Income Inequality Before and After Taxes",
+    "section": "",
+    "text": "# A tibble: 52 × 3\n   Entity             mean_disposable mean_before_tax\n   &lt;chr&gt;                        &lt;dbl&gt;           &lt;dbl&gt;\n 1 South Africa                 0.636           0.731\n 2 Cote d'Ivoire                0.561         NaN    \n 3 Dominican Republic           0.515           0.523\n 4 Brazil                       0.511           0.588\n 5 Paraguay                     0.500         NaN    \n 6 Colombia                     0.499         NaN    \n 7 India                        0.496         NaN    \n 8 Chile                        0.489         NaN    \n 9 Peru                         0.473         NaN    \n10 Guatemala                    0.473         NaN    \n# ℹ 42 more rows"
+  }
+]
