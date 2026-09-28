@@ -8,8 +8,11 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
-      - Dataset1.qmd
+      - href: Dataset1.qmd
+        text: Income Inequality
+      - href: Dataset2.qmd
+
+      
 
 
 format:

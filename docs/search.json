@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "DS002Website",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+    "text": "This is Andy Xiao’s Project 1 which analyzes two Tidy Tuesday datasets"
   },
   {
     "objectID": "about.html",
@@ -18,6 +18,13 @@
     "href": "Dataset1.html",
     "title": "Income Inequality Before and After Taxes",
     "section": "",
-    "text": "# A tibble: 52 × 3\n   Entity             mean_disposable mean_before_tax\n   &lt;chr&gt;                        &lt;dbl&gt;           &lt;dbl&gt;\n 1 South Africa                 0.636           0.731\n 2 Cote d'Ivoire                0.561         NaN    \n 3 Dominican Republic           0.515           0.523\n 4 Brazil                       0.511           0.588\n 5 Paraguay                     0.500         NaN    \n 6 Colombia                     0.499         NaN    \n 7 India                        0.496         NaN    \n 8 Chile                        0.489         NaN    \n 9 Peru                         0.473         NaN    \n10 Guatemala                    0.473         NaN    \n# ℹ 42 more rows"
+    "text": "In this dataset we are analyzing income inequality before and after taxes. To measure inequality the Gini coefficient measures inequality on a scale from 0 to 1 with high values indicating higher inequality.\n\n\n\n\n\n\n\n\n\nIn these five countries, taxes and government benefits have the greatest reduction in income inequality with most countries lowering the Gini coeffient by around 0.2 points after taxes and benefits.\n\n\n\n\n\n\n\n\n\nHere is the income inequality of the United States before and after tax from 1960-2020. Here we can see a large reduction in the Gini coeffient from pre tax to after tax. This indicates that the United States tax and benefits substantially helps lower income inequality.\nTidyTuesday Data set: https://github.com/rfordatascience/tidytuesday/blob/main/data/2025/2025-08-05/readme.md\nOriginal source: Hasell, J. (2023). Income inequality before and after taxes: How much do countries redistribute income? Our World in Data. https://ourworldindata.org/income-inequality-before-and-after-taxes"
+  },
+  {
+    "objectID": "Dataset2.html",
+    "href": "Dataset2.html",
+    "title": "Pixar Films",
+    "section": "",
+    "text": "In this tidyTuesday dataset, we are given two data sets pixar_films and public_response. The pixar_films data set outlines every Pixar file with its release date, run time, and film rating. The public_response data set outlines several rating metrics for each of the Pixar films. We can start my merging the two data sets together.\n\n\n\n\n\n\n\n\n\nThis data visualizes each of the Pixar films Rotten Tomatoes Score with its release date. In this visulization Cars 2 is a clear outlier with a Rotten Tomatoes Score of 40 while many other Pixar films are much higher.\nTidyTuesday dataset: https://github.com/rfordatascience/tidytuesday/tree/main/data/2025/2025-03-11\nOriginal source: {pixarfilms} R package by Eric Leung"
   }
 ]

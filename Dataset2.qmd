@@ -1,0 +1,40 @@
+---
+title: "Pixar Films"
+about: marquee
+description: "Analysis of Pixar film rankings from Tidy Tuesday"
+execute:
+  echo: false
+  results: hide
+  warning: false
+author: Andy Xiao
+format: 
+    html:
+        fig-width: 12
+        fig-height: 8
+
+
+---
+In this tidyTuesday dataset, we are given two data sets pixar_films and public_response. The pixar_films data set outlines every Pixar file with its release date, run time, and film rating. The public_response data set outlines several rating metrics for each of the Pixar films. We can start my merging the two data sets together.
+```{r}
+library(tidyverse)
+pixar_films <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-03-11/pixar_films.csv')
+public_response <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-03-11/public_response.csv')
+
+pixar <- pixar_films|>
+    left_join(public_response, by = "film")
+ggplot(pixar, aes(y = rotten_tomatoes, x = release_date)) + 
+    geom_point(size = 3, color = "steelblue") + 
+    geom_text(aes(label=film), size = 3, vjust = -1) + 
+    labs(
+        title = "Rotten Tomatoes vs Release Date",
+        x = "Release Date",
+        y = "Rotten Tomatoes Score"
+    ) + 
+    theme_minimal()
+```
+
+This data visualizes each of the Pixar films Rotten Tomatoes Score with its release date. In this visulization Cars 2 is a clear outlier with a Rotten Tomatoes Score of 40 while many other Pixar films are much higher.
+
+TidyTuesday dataset: https://github.com/rfordatascience/tidytuesday/tree/main/data/2025/2025-03-11
+
+Original source: {pixarfilms} R package by Eric Leung

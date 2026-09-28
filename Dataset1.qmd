@@ -1,37 +1,63 @@
 ---
 title: "Income Inequality Before and After Taxes"
 about: marquee
+description: "Analysis of income inequality from Tidy Tuesday"
 execute:
   echo: false
   results: hide
   warning: false
+author: Andy Xiao
+format: html
+
 
 ---
-
+In this dataset we are analyzing income inequality before and after taxes. To measure inequality the Gini coefficient measures inequality on a scale from 0 to 1 with high values indicating higher inequality.
 
 ```{r}
 library(tidyverse)
 income_inequality_processed <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-08-05/income_inequality_processed.csv')
-world_difference = income_inequality_processed |>
+world_difference <- income_inequality_processed |>
     mutate(difference = gini_mi_eq - gini_dhi_eq) |>
-    filter(!is.na(difference)) |>
-    slice_max(difference, n = 10)
-world_difference
+    filter(!is.na(difference))
 
+top5 <- world_difference|>
+    group_by(Entity) |>
+    summarize(mean_diff = mean(difference)) |>
+    slice_max(mean_diff, n = 5)|>
+    pull(Entity)
+
+world_difference1 <- world_difference |>
+    filter(Entity %in% top5)
 
 
 USA_income = income_inequality_processed |>
     filter(Entity == "United States")
 
-ggplot(world_difference, aes(x = Year, y = difference, color = Entity))+ 
-    geom_line()
+ggplot(world_difference1, aes(x = Year, y = difference, color = Entity))+ 
+    geom_point() +
+    geom_line() + 
+    labs(
+        title = "Top 5 countries with largest after tax difference",
+        y = "post-tax Gini difference"
+    )
+```
+
+In these five countries, taxes and government benefits have the greatest reduction in income inequality with most countries lowering the Gini coeffient by around 0.2 points after taxes and benefits.
+
+```{r}
 ggplot(USA_income, aes(x = Year)) +
     geom_line(aes(y = gini_dhi_eq, color = "After Tax")) + 
     geom_line(aes(y = gini_mi_eq, color = "Before Tax")) +
     labs(
         color = "Income Measure",
-        y = "income Inequality",
+        y = "Income Inequality",
         title = "United States Income Inequality"
 
     )
 ```
+
+Here is the income inequality of the United States before and after tax from 1960-2020. Here we can see a large reduction in the Gini coeffient from pre tax to after tax. This indicates that the United States tax and benefits substantially helps lower income inequality.
+
+TidyTuesday Data set: https://github.com/rfordatascience/tidytuesday/blob/main/data/2025/2025-08-05/readme.md
+
+Original source: Hasell, J. (2023). Income inequality before and after taxes: How much do countries redistribute income? Our World in Data. https://ourworldindata.org/income-inequality-before-and-after-taxes

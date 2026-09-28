@@ -3,6 +3,4 @@ title: "DS002Website"
 about: solana
 ---
 
-This is a Quarto website.
-
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+This is Andy Xiao's Project 1 which analyzes two Tidy Tuesday datasets

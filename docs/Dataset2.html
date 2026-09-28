@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Andy Xiao">
-<meta name="description" content="Analysis of income inequality from Tidy Tuesday">
+<meta name="description" content="Analysis of Pixar film rankings from Tidy Tuesday">
 
-<title>Income Inequality Before and After Taxes – Data Science: Andy Xiao</title>
+<title>Pixar Films – Data Science: Andy Xiao</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -265,11 +265,11 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./Dataset1.html" aria-current="page"> 
+    <a class="nav-link" href="./Dataset1.html"> 
 <span class="menu-text">Income Inequality</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./Dataset2.html"> 
+    <a class="nav-link active" href="./Dataset2.html" aria-current="page"> 
 <span class="menu-text">Pixar Films</span></a>
   </li>  
 </ul>
@@ -292,11 +292,11 @@ ul.task-list li input[type="checkbox"] {
   <div class="about-contents">
     <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Income Inequality Before and After Taxes</h1>
+<h1 class="title">Pixar Films</h1>
 </div>
 <div>
   <div class="description">
-    Analysis of income inequality from Tidy Tuesday
+    Analysis of Pixar film rankings from Tidy Tuesday
   </div>
 </div>
 <div class="quarto-title-meta column-page">
@@ -309,29 +309,19 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </header> <main class="content column-page" id="quarto-document-content">
 
-<p>In this dataset we are analyzing income inequality before and after taxes. To measure inequality the Gini coefficient measures inequality on a scale from 0 to 1 with high values indicating higher inequality.</p>
+<p>In this tidyTuesday dataset, we are given two data sets pixar_films and public_response. The pixar_films data set outlines every Pixar file with its release date, run time, and film rating. The public_response data set outlines several rating metrics for each of the Pixar films. We can start my merging the two data sets together.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="Dataset1_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="Dataset2_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="1152"></p>
 </figure>
 </div>
 </div>
 </div>
-<p>In these five countries, taxes and government benefits have the greatest reduction in income inequality with most countries lowering the Gini coeffient by around 0.2 points after taxes and benefits.</p>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="Dataset1_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>Here is the income inequality of the United States before and after tax from 1960-2020. Here we can see a large reduction in the Gini coeffient from pre tax to after tax. This indicates that the United States tax and benefits substantially helps lower income inequality.</p>
-<p>TidyTuesday Data set: https://github.com/rfordatascience/tidytuesday/blob/main/data/2025/2025-08-05/readme.md</p>
-<p>Original source: Hasell, J. (2023). Income inequality before and after taxes: How much do countries redistribute income? Our World in Data. https://ourworldindata.org/income-inequality-before-and-after-taxes</p>
+<p>This data visualizes each of the Pixar films Rotten Tomatoes Score with its release date. In this visulization Cars 2 is a clear outlier with a Rotten Tomatoes Score of 40 while many other Pixar films are much higher.</p>
+<p>TidyTuesday dataset: https://github.com/rfordatascience/tidytuesday/tree/main/data/2025/2025-03-11</p>
+<p>Original source: {pixarfilms} R package by Eric Leung</p>
 
 
 </main> 
