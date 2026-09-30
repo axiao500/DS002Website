@@ -3,11 +3,14 @@ title: "Income Inequality Before and After Taxes"
 about: marquee
 description: "Analysis of income inequality from Tidy Tuesday"
 execute:
-  echo: false
-  results: hide
+  echo: true
+  message: false
   warning: false
 author: Andy Xiao
-format: html
+format: 
+    html:
+        code-fold: true
+        code-summary: "Show code"
 
 
 ---

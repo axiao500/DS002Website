@@ -1,6 +1,14 @@
 ---
 title: "DS002Website"
-about: solana
+about: 
+    template: jolla
+    image: headshot.png
+    image-shape: round
+    image-width: 14em
+    links:
+    - icon: github
+    - href: https://github.com/axiao500/DS002Website
 ---
 
-This is Andy Xiao's Project 1 which analyzes two Tidy Tuesday datasets
+Hi, I'm Andy Xiao, a Computer Science and Economics student at Pomona College. I also play soccer on the Pomona-Pitzer mens team.
+This website is for D2002

@@ -8,9 +8,13 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: Dataset1.qmd
-        text: Income Inequality
-      - href: Dataset2.qmd
+      - text: "DS002 Projects"
+        menu:
+        - href: Dataset1.qmd
+          text: Income Inequality
+        - href: Dataset2.qmd
+          text: Pixar Films
+
 
       
 
